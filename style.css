@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color:red;
+    font-family: "Poppins",sans-serif;
+}
+a,
+button {
+    font-family: "Poppins", sans-serif;
+}
+.dropdown {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.smartphones,
+.TV,
+.Laptop {
+    position: relative;
+}
+.smartphones ul,
+.TV ul,
+.Laptop ul {
+    position: absolute;
+    background-color: white;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    
+}
+.smartphones a,
+.TV a,
+.Laptop a {
+    color: black;
+    text-decoration: none;
+}
+
+.smartphones li,
+.TV li,
+.Laptop li {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.smartphones li:hover,
+.TV li:hover,
+.Laptop li:hover {
+    background-color: rgb(77, 53, 255);
+}
+
+.dropdown button {
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.dropdown button:hover {
+    background-color: blue;
+}
+
+.smartphones button:focus + ul,
+.TV button:focus + ul,
+.Laptop button:focus + ul {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+
+}
